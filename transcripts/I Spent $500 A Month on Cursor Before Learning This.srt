@@ -1,0 +1,1116 @@
+1
+00:00:00,020 --> 00:00:02,560
+I used to spend up to $500 a month on Cursor,
+
+2
+00:00:02,780 --> 00:00:04,340
+but the worst part wasn't the money.
+
+3
+00:00:04,580 --> 00:00:07,440
+It was the uncertainty because in some months,
+
+4
+00:00:07,460 --> 00:00:09,120
+I would barely hit the monthly limits
+
+5
+00:00:09,540 --> 00:00:14,100
+while other months I would watch my bill go up to $488.31.
+
+6
+00:00:14,640 --> 00:00:17,500
+So last week, I finally unsubscribed from Cursor
+
+7
+00:00:17,560 --> 00:00:19,700
+and started using Claude Code instead.
+
+8
+00:00:20,200 --> 00:00:22,980
+But Claude Code comes with its own set of problems.
+
+9
+00:00:23,400 --> 00:00:26,180
+And I really didn't like that it didn't have a file tree
+
+10
+00:00:26,200 --> 00:00:27,100
+to browse the project.
+
+11
+00:00:27,300 --> 00:00:29,280
+It didn't show me the changes that it made.
+
+12
+00:00:29,780 --> 00:00:33,720
+and that it had me locked into the clawed-only models
+
+13
+00:00:33,890 --> 00:00:36,020
+without access to models like GPT-5.
+
+14
+00:00:36,680 --> 00:00:38,780
+But then, just a few days after switching,
+
+15
+00:00:39,290 --> 00:00:42,520
+I found a tool that solved all of these problems and more.
+
+16
+00:00:42,900 --> 00:00:45,420
+And the best part was that it was free to use.
+
+17
+00:00:45,660 --> 00:00:47,480
+This tool is called Conductor.
+
+18
+00:00:47,650 --> 00:00:49,620
+And after testing tons of different options,
+
+19
+00:00:50,260 --> 00:00:52,820
+this one to me is the first one
+
+20
+00:00:52,850 --> 00:00:56,300
+that actually feels like a worthy competitor to Cursor.
+
+21
+00:00:56,540 --> 00:00:57,860
+So let me show you why.
+
+22
+00:00:58,080 --> 00:01:00,100
+Because let's start with the most obvious issue.
+
+23
+00:01:00,400 --> 00:01:02,200
+Cloud Code runs in the terminal.
+
+24
+00:01:02,640 --> 00:01:03,900
+And listen, I get it.
+
+25
+00:01:04,180 --> 00:01:06,360
+If you are technical, you might love it.
+
+26
+00:01:06,780 --> 00:01:08,560
+But most of my students are not
+
+27
+00:01:08,780 --> 00:01:10,820
+and they will find it genuinely scary.
+
+28
+00:01:11,280 --> 00:01:12,980
+But even if you do love the terminal,
+
+29
+00:01:13,220 --> 00:01:15,580
+you're still missing out on very important features
+
+30
+00:01:16,180 --> 00:01:18,380
+that will make you a dramatically better
+
+31
+00:01:18,640 --> 00:01:19,980
+no-code software architect.
+
+32
+00:01:20,600 --> 00:01:23,300
+And the biggest one is simply being able to see
+
+33
+00:01:23,800 --> 00:01:24,960
+what the AI is doing.
+
+34
+00:01:25,280 --> 00:01:27,300
+It's kind of like hiring a contractor
+
+35
+00:01:27,320 --> 00:01:28,500
+to renovate your house,
+
+36
+00:01:28,840 --> 00:01:30,680
+but they won't let you see the blueprints
+
+37
+00:01:30,900 --> 00:01:32,380
+or walk the job site.
+
+38
+00:01:32,600 --> 00:01:34,800
+You just have to come home one day, randomly,
+
+39
+00:01:35,140 --> 00:01:37,800
+after they finished and hope that they didn't accidentally
+
+40
+00:01:38,180 --> 00:01:39,980
+break anything that they weren't supposed to.
+
+41
+00:01:40,320 --> 00:01:43,260
+This is where a file tree lets you see exactly
+
+42
+00:01:43,480 --> 00:01:44,860
+what files AI creates.
+
+43
+00:01:45,020 --> 00:01:47,520
+So you start to understand what the app folder is,
+
+44
+00:01:47,920 --> 00:01:49,420
+where components should live,
+
+45
+00:01:49,560 --> 00:01:52,960
+how your project is structured, and most importantly,
+
+46
+00:01:53,500 --> 00:01:57,280
+you can verify that the AI actually did what you expected
+
+47
+00:01:57,300 --> 00:01:58,320
+without writing code.
+
+48
+00:01:58,760 --> 00:02:02,740
+You also need a way to see the changes that clawed code made
+
+49
+00:02:02,960 --> 00:02:04,640
+because this will give you the confidence
+
+50
+00:02:04,880 --> 00:02:06,700
+that it didn't touch a bunch of other files
+
+51
+00:02:06,980 --> 00:02:09,020
+that if it did would be a sign
+
+52
+00:02:09,039 --> 00:02:10,940
+that your prompt wasn't clear enough.
+
+53
+00:02:11,480 --> 00:02:13,960
+This is actually a key problem to look out for
+
+54
+00:02:14,220 --> 00:02:17,120
+and one that will help you avoid large changes
+
+55
+00:02:17,400 --> 00:02:18,460
+that you didn't ask for.
+
+56
+00:02:18,760 --> 00:02:20,340
+Because when you open Conductor,
+
+57
+00:02:20,700 --> 00:02:23,560
+it really feels like a proper editor without the code though.
+
+58
+00:02:23,880 --> 00:02:25,040
+You've got your file tree.
+
+59
+00:02:25,240 --> 00:02:26,240
+Let me just show it to you.
+
+60
+00:02:26,400 --> 00:02:28,560
+You got your file tree on the right, right here.
+
+61
+00:02:28,650 --> 00:02:36,060
+So you can click through the project where all the files are and even click on them to see what's in sight.
+
+62
+00:02:36,500 --> 00:02:47,360
+In rare cases where you do want to edit a specific file manually, you also have a button up here that will open this project in your favorite editor, which for me is still Cursor.
+
+63
+00:02:47,540 --> 00:02:49,060
+But you have a lot of them available.
+
+64
+00:02:49,270 --> 00:02:53,400
+You have like Cursor, VS Code, Zed, Windsurf, Ghosty Warp, right?
+
+65
+00:02:53,890 --> 00:02:54,920
+Even Anti-Gravity.
+
+66
+00:02:55,180 --> 00:02:57,500
+and you can even copy the path if you really want to.
+
+67
+00:02:57,980 --> 00:03:00,260
+You can also see all the files that changed,
+
+68
+00:03:00,480 --> 00:03:02,620
+which again, while you don't have to code,
+
+69
+00:03:02,760 --> 00:03:05,340
+you definitely have to understand what your project is doing
+
+70
+00:03:05,540 --> 00:03:08,120
+if you want to keep it scalable in the future.
+
+71
+00:03:08,680 --> 00:03:11,500
+So there is also a run button down here
+
+72
+00:03:11,660 --> 00:03:14,440
+that will automatically start your development server
+
+73
+00:03:15,040 --> 00:03:18,720
+and even a review button that will run a full code review
+
+74
+00:03:19,140 --> 00:03:21,220
+all without running any commands manually
+
+75
+00:03:21,540 --> 00:03:24,560
+or asking a terminal version of Claude anything.
+
+76
+00:03:25,040 --> 00:03:27,440
+And while all of these differences might sound small,
+
+77
+00:03:27,640 --> 00:03:29,500
+I guarantee that they will make you faster
+
+78
+00:03:29,740 --> 00:03:31,700
+and more confident in building with AI
+
+79
+00:03:32,020 --> 00:03:34,120
+while again, never writing code.
+
+80
+00:03:34,560 --> 00:03:36,900
+But it's great to have a pretty interface,
+
+81
+00:03:37,240 --> 00:03:38,820
+but what really makes Conductor powerful
+
+82
+00:03:38,980 --> 00:03:41,740
+is how it handles the scariest part of AI coding.
+
+83
+00:03:42,180 --> 00:03:44,800
+Because here's the moment that every AI coder knows.
+
+84
+00:03:45,160 --> 00:03:47,240
+You ask the model to rebuild this function
+
+85
+00:03:47,440 --> 00:03:49,940
+or fix this bug when clicking this and this button.
+
+86
+00:03:50,340 --> 00:03:52,980
+Then it goes away and after a few minutes it says done,
+
+87
+00:03:53,340 --> 00:03:56,040
+but suddenly half of your app is literally broken.
+
+88
+00:03:56,600 --> 00:03:59,280
+Now you're spending the next two hours undoing damage
+
+89
+00:03:59,570 --> 00:04:00,860
+instead of building something new.
+
+90
+00:04:01,260 --> 00:04:02,540
+You're digging through your history,
+
+91
+00:04:02,940 --> 00:04:04,520
+trying to figure out where it went wrong
+
+92
+00:04:04,940 --> 00:04:08,160
+before ultimately accepting that the working version
+
+93
+00:04:08,230 --> 00:04:10,200
+that you used to have is gone forever.
+
+94
+00:04:10,860 --> 00:04:14,740
+This is the problem that GitHub branches and work trees,
+
+95
+00:04:15,010 --> 00:04:17,620
+two very important words that you need to remember
+
+96
+00:04:17,620 --> 00:04:20,279
+if you don't know them yet, they solve this
+
+97
+00:04:20,299 --> 00:04:23,820
+because they kind of work like Google Docs version history.
+
+98
+00:04:24,090 --> 00:04:26,280
+You can see every change that was ever made
+
+99
+00:04:26,740 --> 00:04:28,800
+roll back to any past point in time
+
+100
+00:04:29,270 --> 00:04:30,640
+and nothing is ever truly lost.
+
+101
+00:04:31,240 --> 00:04:33,300
+And a branch is sort of the same concept,
+
+102
+00:04:33,470 --> 00:04:34,820
+but for your entire code base.
+
+103
+00:04:35,280 --> 00:04:36,480
+It's a parallel copy
+
+104
+00:04:36,780 --> 00:04:38,960
+where you can break things without consequences.
+
+105
+00:04:39,690 --> 00:04:43,500
+And then work trees take branches one step further
+
+106
+00:04:43,720 --> 00:04:46,300
+by creating a completely isolated copy,
+
+107
+00:04:46,540 --> 00:04:49,139
+which means that you can have multiple agents
+
+108
+00:04:49,160 --> 00:04:51,900
+working in isolated copies of the same project
+
+109
+00:04:52,180 --> 00:04:55,440
+at the same time without these agents fighting each other
+
+110
+00:04:55,540 --> 00:04:57,320
+or getting confused about code
+
+111
+00:04:57,320 --> 00:04:59,140
+that they didn't write or edit.
+
+112
+00:04:59,320 --> 00:05:01,000
+And the best part of all of this is that
+
+113
+00:05:01,160 --> 00:05:04,040
+you truly don't need to understand how any of this works
+
+114
+00:05:04,180 --> 00:05:07,540
+because Conductor abstracts this functionality away
+
+115
+00:05:08,120 --> 00:05:10,800
+with something that they call WorkSpaces,
+
+116
+00:05:11,220 --> 00:05:13,540
+which automatically create a new branch
+
+117
+00:05:13,800 --> 00:05:15,160
+and a work tree for you.
+
+118
+00:05:15,440 --> 00:05:17,120
+This means that you can literally go wild.
+
+119
+00:05:17,260 --> 00:05:18,280
+You can delete files.
+
+120
+00:05:18,460 --> 00:05:19,680
+You can do all types of things.
+
+121
+00:05:19,920 --> 00:05:21,000
+All you have to do is click.
+
+122
+00:05:21,460 --> 00:05:22,820
+So once you have all the projects here,
+
+123
+00:05:23,040 --> 00:05:24,640
+you can just click new workspace
+
+124
+00:05:25,020 --> 00:05:27,400
+and then Conductor will set this up for you, right?
+
+125
+00:05:27,540 --> 00:05:30,060
+So you see now I have a completely isolated copy
+
+126
+00:05:30,720 --> 00:05:32,060
+of the same project.
+
+127
+00:05:32,620 --> 00:05:34,400
+And here I can do all types of things.
+
+128
+00:05:34,480 --> 00:05:36,980
+I could like delete files if I wanted to
+
+129
+00:05:37,240 --> 00:05:38,860
+and do all types of like crazy stuff.
+
+130
+00:05:39,540 --> 00:05:40,920
+And then if it works, great,
+
+131
+00:05:41,420 --> 00:05:42,960
+because we can get these changes back
+
+132
+00:05:43,100 --> 00:05:45,140
+into your main project in just a moment.
+
+133
+00:05:45,660 --> 00:05:46,360
+But here's the thing.
+
+134
+00:05:46,740 --> 00:05:49,340
+If it breaks, you can literally just archive
+
+135
+00:05:49,820 --> 00:05:52,860
+this broken workspace and your main project,
+
+136
+00:05:53,200 --> 00:05:54,160
+let me just do this right now,
+
+137
+00:05:54,920 --> 00:05:57,340
+never knew that these changes even happened.
+
+138
+00:05:57,640 --> 00:05:59,680
+It's like you never broke anything to begin with.
+
+139
+00:06:00,040 --> 00:06:01,120
+But now the question is,
+
+140
+00:06:01,360 --> 00:06:04,160
+when you have built something great in your safe workspace,
+
+141
+00:06:04,780 --> 00:06:07,020
+how does it actually get back into your main project?
+
+142
+00:06:07,480 --> 00:06:09,680
+This is where a lot of people will get lost
+
+143
+00:06:09,760 --> 00:06:11,340
+in these GitHub terminologies
+
+144
+00:06:11,720 --> 00:06:14,619
+because there's branches and merges and rebases
+
+145
+00:06:14,640 --> 00:06:16,840
+and it all sounds very complicated.
+
+146
+00:06:17,270 --> 00:06:19,400
+But the concept is actually really simple.
+
+147
+00:06:19,900 --> 00:06:22,000
+Let's go back to this like Google Docs analogy
+
+148
+00:06:22,340 --> 00:06:23,980
+because imagine you have a contract
+
+149
+00:06:24,280 --> 00:06:25,200
+that needs to be signed
+
+150
+00:06:25,440 --> 00:06:27,500
+and you have made edits to this contract
+
+151
+00:06:27,740 --> 00:06:29,740
+and now you need to send it back to the other party
+
+152
+00:06:29,920 --> 00:06:30,820
+for them to check.
+
+153
+00:06:31,200 --> 00:06:33,020
+So you say, here's what I changed,
+
+154
+00:06:33,280 --> 00:06:35,940
+please review it before we both sign this contract.
+
+155
+00:06:36,380 --> 00:06:39,300
+With GitHub, this is called a pull request
+
+156
+00:06:39,900 --> 00:06:41,300
+and it's essentially a formal,
+
+157
+00:06:41,840 --> 00:06:43,240
+listen, here are my changes,
+
+158
+00:06:43,580 --> 00:06:47,440
+Let's review all of them before merging them back into the main project.
+
+159
+00:06:48,080 --> 00:06:51,980
+And in Conductor, you can literally just press a single button to do this.
+
+160
+00:06:52,230 --> 00:06:57,640
+So all you have to do is literally go up here and click the PR button, right?
+
+161
+00:06:57,780 --> 00:06:58,640
+Create PR.
+
+162
+00:06:58,970 --> 00:07:04,440
+And then what it does is it opens a pull request on your behalf on GitHub.
+
+163
+00:07:04,590 --> 00:07:05,940
+You can see this right here.
+
+164
+00:07:06,320 --> 00:07:11,320
+There's actually a custom prompt that it will inject into the current chat.
+
+165
+00:07:11,330 --> 00:07:12,860
+So you don't have to explain anything.
+
+166
+00:07:13,460 --> 00:07:17,780
+And then before you know it, it will actually create this pull request for you.
+
+167
+00:07:18,280 --> 00:07:19,480
+And you can see this right here.
+
+168
+00:07:19,720 --> 00:07:19,840
+Perfect.
+
+169
+00:07:20,000 --> 00:07:23,080
+Let me create the PR right now, creating the pull request on GitHub.
+
+170
+00:07:23,180 --> 00:07:25,440
+It runs all of these commands completely for you.
+
+171
+00:07:25,920 --> 00:07:39,000
+And then before you know it, the button up here has turned into PR33, which means in my case, this is the 33rd pull request that I have opened in this particular project.
+
+172
+00:07:39,460 --> 00:07:43,140
+And you can actually click this button again and then open it inside of GitHub.
+
+173
+00:07:43,220 --> 00:07:49,820
+And then on this page, it can actually show you exactly what changed as a text summary and what
+
+174
+00:07:50,080 --> 00:07:55,860
+files changed and how many lines have changed. So for example, here you can see that 55 lines have
+
+175
+00:07:55,870 --> 00:08:01,500
+been added, 39 lines have been removed. So it's a relatively small change. Three files have changed.
+
+176
+00:08:01,530 --> 00:08:05,460
+You can actually see which files changed, but again, it would require you to, you know, like
+
+177
+00:08:05,560 --> 00:08:10,280
+read code. You don't really want that, but at least you can see that only three files were changed,
+
+178
+00:08:10,360 --> 00:08:14,260
+which is great, right? You can see that there was one commit, which hopefully you already know what
+
+179
+00:08:14,290 --> 00:08:19,240
+that is, and you can see the entire conversation. But here's the thing. You have made some changes,
+
+180
+00:08:19,520 --> 00:08:23,080
+you have created the pull request, but how do you actually know if you're not a developer,
+
+181
+00:08:23,580 --> 00:08:30,180
+if these changes are safe to merge into the main project? This is where AI code reviewers come in.
+
+182
+00:08:30,290 --> 00:08:37,180
+So tools like Cursors, BugBot, AugmentCodes, CodeReview, CodeRabbit, CodeXReview, Graptile,
+
+183
+00:08:37,580 --> 00:08:43,700
+they all come into play at this very stage during a pull request and then automatically analyze
+
+184
+00:08:44,240 --> 00:08:49,740
+your changes. If they find problems, you can literally just copy their feedback back into
+
+185
+00:08:49,880 --> 00:08:55,420
+Conductor and make fixes. And then Conductor will automatically update this pull request,
+
+186
+00:08:55,820 --> 00:09:00,940
+and then reviewers can run again and you can keep this loop going back and forth until you are
+
+187
+00:09:01,280 --> 00:09:06,039
+confident that the changes you made are actually safe. This is actually the workflow that real
+
+188
+00:09:06,060 --> 00:09:10,660
+engineers use every day. And in this particular case, I've actually introduced a bunch of errors
+
+189
+00:09:11,030 --> 00:09:15,020
+into this project so you can see what this looks like. So you can see here I have the
+
+190
+00:09:15,620 --> 00:09:22,700
+greptile code reviewer running. And it's funny, this pull request intentionally introduces multiple
+
+191
+00:09:23,120 --> 00:09:28,020
+critical security vulnerabilities and removes essential protections for demonstration purposes.
+
+192
+00:09:28,700 --> 00:09:33,719
+Yeah, exactly. So you can see that it found like all types of things here. It has a confidence score
+
+193
+00:09:33,740 --> 00:09:38,120
+of zero from five important files have changed, right?
+
+194
+00:09:38,130 --> 00:09:40,020
+And there's a bunch of different problems.
+
+195
+00:09:40,210 --> 00:09:44,900
+Like here, there's a fake API key that I introduced,
+
+196
+00:09:45,520 --> 00:09:47,300
+or there's some like logging,
+
+197
+00:09:47,450 --> 00:09:49,340
+like remove before production, right?
+
+198
+00:09:49,350 --> 00:09:51,420
+So it picked up on all of these changes.
+
+199
+00:09:51,910 --> 00:09:52,680
+And if I wanted to,
+
+200
+00:09:52,710 --> 00:09:55,600
+I could literally just copy these, for example, right?
+
+201
+00:09:55,610 --> 00:09:56,540
+And be like, okay, wow.
+
+202
+00:09:57,200 --> 00:09:58,460
+Like prompt to fix this,
+
+203
+00:09:58,660 --> 00:10:01,080
+Graptile in particular gives you a prompt to fix this,
+
+204
+00:10:01,480 --> 00:10:02,580
+which you could just like copy.
+
+205
+00:10:03,220 --> 00:10:08,380
+and then do just copy it back in here and then go through the loop as explained.
+
+206
+00:10:08,630 --> 00:10:13,840
+And this entire workflow is made so easy by Conductor that it becomes a no-brainer to use.
+
+207
+00:10:14,050 --> 00:10:19,180
+But there's one big problem, a limitation that Claude code on its own can't fix.
+
+208
+00:10:19,560 --> 00:10:23,340
+Because when you use only Claude code directly, you're locked into the Claude models,
+
+209
+00:10:23,550 --> 00:10:26,220
+which means Haiku, Sonnet and Opus. That's your entire menu.
+
+210
+00:10:26,610 --> 00:10:32,120
+And listen, before you start commenting down below that Opus is like Alien Tech and the best model,
+
+211
+00:10:32,620 --> 00:10:39,140
+It's not. It's a really great model at generating code and iterative sort of like coding together
+
+212
+00:10:39,460 --> 00:10:44,820
+with you. But GPT-5, it's actually better at a lot of tasks like code reviews, bug fixes,
+
+213
+00:10:44,950 --> 00:10:50,340
+and creating large architectural plans. It's also better at working on its own for hours,
+
+214
+00:10:50,650 --> 00:10:56,460
+if you know what you're doing. I personally use GPT-5 High whenever I build something high stakes,
+
+215
+00:10:56,480 --> 00:11:02,620
+like a payment integration or large architectural changes, maybe a big API integration, something
+
+216
+00:11:02,780 --> 00:11:08,740
+like that, right? And just a while back, I built out a Stripe webhook and payment flow using GPT-5
+
+217
+00:11:08,940 --> 00:11:14,520
+Codex High. It took easily 40 minutes, right? Like way longer than Opus would have, but it just
+
+218
+00:11:14,760 --> 00:11:18,860
+knocked it out of the park while I was working on another thing. It just ran on its own, tested
+
+219
+00:11:19,080 --> 00:11:24,440
+everything, and then delivered something that worked right away. Then I used the standard GPT-5
+
+220
+00:11:24,460 --> 00:11:28,900
+to review everything because just to get this out of the way, Codex is really great at autonomous
+
+221
+00:11:29,160 --> 00:11:34,680
+work and the standard vanilla GPT-5 variants, they are much better at detailed analysis,
+
+222
+00:11:35,120 --> 00:11:40,260
+reviewing that type of stuff. So I often use GPT-5 to review everything that Opus, for example,
+
+223
+00:11:40,680 --> 00:11:46,660
+builds. And typically there are things that GPT-5 will find that Opus messed up. Sometimes it's just
+
+224
+00:11:46,800 --> 00:11:51,940
+duplicated code or things that it didn't consider, but other times it's actually critical bugs that
+
+225
+00:11:51,960 --> 00:11:57,180
+Opus just couldn't catch. And if you just use cloud code on its own, there's just no way for
+
+226
+00:11:57,520 --> 00:12:02,120
+you to tap into the benefits of both of these worlds. But in Conductor, you have full access
+
+227
+00:12:02,240 --> 00:12:09,940
+to both. You're literally one click away to switch from Opus 4.5 to GPT 5.2. This is what the best
+
+228
+00:12:10,100 --> 00:12:15,340
+AI builders do today, because when you have access to both, you get the incredible power of Opus 4.5,
+
+229
+00:12:15,420 --> 00:12:21,680
+which is a really great model with the confidence and better thinking capabilities of GPT 5.
+
+230
+00:12:22,360 --> 00:12:28,260
+Use Claude for fast building and everyday tasks and then switch to GPT-5 for deep reviews,
+
+231
+00:12:28,680 --> 00:12:31,180
+larger plans, because it's just better at it.
+
+232
+00:12:31,560 --> 00:12:35,860
+And because you're no longer locked into one of these model families, you get both.
+
+233
+00:12:36,460 --> 00:12:40,740
+But it gets even better, because just like a cursor, you don't have to choose one model
+
+234
+00:12:40,940 --> 00:12:41,280
+at a time.
+
+235
+00:12:41,720 --> 00:12:44,480
+Because AI coding happens usually one thing at a time.
+
+236
+00:12:44,690 --> 00:12:49,880
+You prompt, you wait, you review, you prompt again, always waiting for the last thing to
+
+237
+00:12:49,900 --> 00:12:55,200
+finish before you start the next. But what if you didn't have to wait? What if you could have one
+
+238
+00:12:55,370 --> 00:13:00,020
+agent build a feature while another answers a question about your code base or updates some
+
+239
+00:13:00,140 --> 00:13:06,300
+documentation that is due? I do this constantly. I have one tab for example where Opus is building a
+
+240
+00:13:06,420 --> 00:13:11,540
+new feature or a new dashboard. I have a second tab open where I ask with Sonnet because it's a bit
+
+241
+00:13:11,680 --> 00:13:17,560
+cheaper to answer questions about an API while I'm planning a next feature or something like that.
+
+242
+00:13:17,940 --> 00:13:22,700
+And then sometimes if I'm going wild, because you know, like some models, they are like slower than
+
+243
+00:13:22,900 --> 00:13:29,380
+others, I have a third tab open where for example use GPT-5-high to update documentation or plan
+
+244
+00:13:29,580 --> 00:13:35,020
+something because all of these can do work independently at the same time. But in Cloud
+
+245
+00:13:35,140 --> 00:13:40,260
+Code, you would literally need to have multiple terminal windows open, you would have to manually
+
+246
+00:13:40,580 --> 00:13:46,600
+create all these branches and work trees and even then Cloud Code and Codex aren't even sharing
+
+247
+00:13:46,620 --> 00:13:51,860
+context with each other so it can get chaotic really fast. In Conductor however you can just
+
+248
+00:13:52,080 --> 00:13:56,820
+open multiple tabs inside the same workspace. So let me just open a new workspace once again just
+
+249
+00:13:56,980 --> 00:14:03,320
+wait until it's like done and now I have a single tab right and I can choose let's say Opus and say
+
+250
+00:14:03,520 --> 00:14:11,880
+UltraThink and say research this code base and give me some improvements right and then I can
+
+251
+00:14:11,900 --> 00:14:18,840
+take this code actually, I can copy the code, open a new tab right here and run the same prompt,
+
+252
+00:14:19,380 --> 00:14:26,460
+but let's say with GPT-5, let's say, hi, right? And now I have both of these agents do the same
+
+253
+00:14:26,660 --> 00:14:30,520
+task actually, because in this case, it's a read-only task. They have access to the same
+
+254
+00:14:30,860 --> 00:14:36,300
+project, the same files, the same workspace. This is truly the closest thing to cursor that I have
+
+255
+00:14:36,460 --> 00:14:41,860
+seen. So at this point, you're probably asking yourself, what does this all actually cost? This
+
+256
+00:14:41,880 --> 00:14:47,440
+actually my favorite part because remember I was spending up to $500 a month on cursor and I've
+
+257
+00:14:47,440 --> 00:14:53,040
+seen screenshots of people hitting $3,000 or more so here's the deal. Conductor itself is completely
+
+258
+00:14:53,180 --> 00:14:57,240
+free. It's not like cursor where you have to pay for the privilege of using their infrastructure
+
+259
+00:14:58,020 --> 00:15:04,660
+to actually do anything with AI because Conductor just uses your existing Claude and ChatGPT
+
+260
+00:15:04,840 --> 00:15:09,440
+subscription. So let's do the math. Because currently I have just two subscriptions. There is
+
+261
+00:15:09,500 --> 00:15:19,420
+Claude Max 5x for $100 a month and ChatGPT+ for Codex for $20 a month. That's just $120 a month for
+
+262
+00:15:19,600 --> 00:15:28,000
+a lot of usage. Way more usage than you can get out of the $200 cursor Ultraplan. Plus you get both
+
+263
+00:15:28,420 --> 00:15:35,040
+model families, no token anxiety, a user interface that is really easy to use, work trees, parallel
+
+264
+00:15:35,060 --> 00:15:39,320
+agents and everything else that I've just shown you. There's also a bunch of features that I
+
+265
+00:15:39,540 --> 00:15:44,060
+haven't even touched on yet. There's so much more to go through, not to mention that this team
+
+266
+00:15:44,580 --> 00:15:49,240
+ships updates all the time. It literally shipped updates over Christmas. Can't make that up.
+
+267
+00:15:49,620 --> 00:15:54,760
+But let me be fair and also say this, because Cursor still has some pretty high advantages. For
+
+268
+00:15:55,000 --> 00:16:00,920
+example, Cursor's plan mode is by far genuinely the best in the industry. And I do hope that
+
+269
+00:16:01,240 --> 00:16:06,700
+Conductor adds something similar that works across the models that they support. There's also no
+
+270
+00:16:06,920 --> 00:16:11,980
+debug mode and no internal browser. So if you're using these features, then Cursor will still be
+
+271
+00:16:12,110 --> 00:16:17,220
+your best bet. But truth be told, I haven't used neither one of these features a lot at all. They're
+
+272
+00:16:17,220 --> 00:16:23,060
+just not part of my daily workflow. But another big potential downside is that Conductor might
+
+273
+00:16:23,620 --> 00:16:29,240
+take a little bit longer, a few hours or a day or so, to make new models available. I'm currently
+
+274
+00:16:29,260 --> 00:16:34,560
+talking to them and see exactly how this works. I might be wrong about this but there is definitely
+
+275
+00:16:34,640 --> 00:16:39,860
+still some work to be done. But in return I get way more tokens and almost everything that I need
+
+276
+00:16:39,980 --> 00:16:46,140
+from Cursor for my daily work at a fraction of the cost and most importantly no token anxiety and I
+
+277
+00:16:46,140 --> 00:16:51,580
+know exactly how I pay how much I pay every single month. But knowing about Conductor is just the
+
+278
+00:16:51,680 --> 00:16:56,500
+first step. I made a full setup tutorial with step-by-step instructions so you can do everything
+
+279
+00:16:56,520 --> 00:16:59,600
+that I have shown you in this video that you can watch right here.
+
