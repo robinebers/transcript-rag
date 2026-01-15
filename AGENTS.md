@@ -12,6 +12,8 @@ Use the CLI to answer questions:
 bun index.ts --ask "user's question here"
 ```
 
+**Context retrieval:** Default is 25 chunks. If more context is needed, use `--top-k 50` or even `--top-k 100` for comprehensive answers.
+
 See [README.md](./README.md) for full command reference and setup instructions.
 
 ## Examples
@@ -54,7 +56,12 @@ bun index.ts --list-lessons
 
 User: "Give me more context on that answer"
 ```bash
-bun index.ts --ask "previous question" --top-k 15
+bun index.ts --ask "previous question" --top-k 50
+```
+
+User: "I need a really thorough explanation"
+```bash
+bun index.ts --ask "question" --top-k 100
 ```
 
 ### When It IS About Coding
