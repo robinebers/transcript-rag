@@ -16,6 +16,22 @@ bun index.ts --ask "user's question here"
 
 See [README.md](./README.md) for full command reference and setup instructions.
 
+## Specific Video/Lesson Mentioned
+
+**IMPORTANT:** When the user mentions a specific video, lesson, or transcript by name, ALWAYS list available lessons first to find the correct lesson ID:
+
+```bash
+bun index.ts --list-lessons
+```
+
+Then use the `--lessons` flag to filter your query to that specific content:
+
+```bash
+bun index.ts --ask "user's question" --lessons "exact-lesson-id"
+```
+
+This ensures accurate, focused answers from the specific content the user is asking about.
+
 ## Examples
 
 ### General Questions
