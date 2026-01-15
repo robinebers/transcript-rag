@@ -17,8 +17,8 @@ export async function runCli() {
   const program = new Command();
 
   program
-    .name("blackbelt")
-    .description("BlackBelt transcript RAG CLI")
+    .name("transcript-rag")
+    .description("Transcript RAG CLI")
     .option("--ingest", "Ingest transcripts (skip processed by default)")
     .option("--force", "Re-ingest all transcripts (overrides skip)")
     .option("--ask <question>", "Ask a question over transcripts")

@@ -1,5 +1,5 @@
 import { config } from "dotenv";
 
 // Load .env.local first (if present), then .env
-config({ path: ".env.local", override: false });
-config();
+config({ path: ".env.local", override: false, quiet: true });
+config({ quiet: true });

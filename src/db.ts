@@ -43,7 +43,7 @@ async function loadSqliteVec() {
 async function getDb() {
   if (db) return db;
   trySetCustomSQLite();
-  db = new Database("blackbelt.db");
+  db = new Database("data/transcript-rag.db");
   return db;
 }
 

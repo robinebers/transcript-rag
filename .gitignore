@@ -1,6 +1,12 @@
 # dependencies (bun install)
 node_modules
 
+# database
+*.db
+
+# transcripts (user content)
+transcripts/
+
 # output
 out
 dist
