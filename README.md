@@ -1,6 +1,6 @@
 # Transcript RAG CLI
 
-A minimal RAG CLI for querying .srt video transcripts.
+A minimal RAG CLI for querying .srt video transcripts. Built for AI coding agents like Claude Code, Codex, OpenCode, and Droid—no UI, just fast answers from your transcripts via the command line.
 
 ## Setup
 
