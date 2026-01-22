@@ -18,7 +18,7 @@ export type RetrievedChunk = ChunkRecord & {
 };
 
 export const EMBEDDING_DIMENSIONS = 1024;
-const SCHEMA_VERSION = 2;
+const SCHEMA_VERSION = 3;
 
 const SQLITE_CANDIDATES = [
   "/opt/homebrew/opt/sqlite/lib/libsqlite3.dylib", // Apple Silicon Homebrew
@@ -115,7 +115,7 @@ export async function initDb() {
 
       CREATE VIRTUAL TABLE chunks_fts USING fts5(
         chunk_id UNINDEXED,
-        lesson_name,
+        lesson_name UNINDEXED,
         text
       );
     `);
