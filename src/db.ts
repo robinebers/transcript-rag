@@ -193,22 +193,26 @@ export function insertChunk(chunk: ChunkRecord): number {
       text
     ) VALUES (?, ?, ?, ?, ?, ?, ?)`,
   );
-  const result = stmt.run(
-    chunk.lessonName,
-    chunk.chunkIndex,
-    chunk.startTime,
-    chunk.endTime,
-    chunk.startSeconds,
-    chunk.endSeconds,
-    chunk.text,
+  const ftsStmt = database.prepare(
+    "INSERT INTO chunks_fts (chunk_id, lesson_name, text) VALUES (?, ?, ?)",
   );
-  const chunkId = Number(result.lastInsertRowid);
-  database
-    .prepare(
-      "INSERT INTO chunks_fts (chunk_id, lesson_name, text) VALUES (?, ?, ?)",
-    )
-    .run(chunkId, chunk.lessonName, chunk.text);
-  return chunkId;
+
+  const insert = database.transaction((record: ChunkRecord) => {
+    const result = stmt.run(
+      record.lessonName,
+      record.chunkIndex,
+      record.startTime,
+      record.endTime,
+      record.startSeconds,
+      record.endSeconds,
+      record.text,
+    );
+    const chunkId = Number(result.lastInsertRowid);
+    ftsStmt.run(chunkId, record.lessonName, record.text);
+    return chunkId;
+  });
+
+  return insert(chunk);
 }
 
 export function insertEmbedding(chunkId: number, embedding: number[]) {
