@@ -41,8 +41,11 @@ function levenshteinDistance(a: string, b: string): number {
 }
 
 function lessonSimilarity(a: string, b: string): number {
-  const aLower = a.toLowerCase();
-  const bLower = b.toLowerCase();
+  const trimmedA = a.trim();
+  const trimmedB = b.trim();
+  if (!trimmedA || !trimmedB) return 0;
+  const aLower = trimmedA.toLowerCase();
+  const bLower = trimmedB.toLowerCase();
   if (aLower === bLower) return 1;
   if (aLower.includes(bLower) || bLower.includes(aLower)) return 0.95;
   const distance = levenshteinDistance(aLower, bLower);
@@ -113,9 +116,18 @@ export async function runCli() {
 
       if (opts.ask) {
         const topK = opts.topK ? Number.parseInt(opts.topK, 10) : 25;
-        const lessons = opts.lessons
+        const lessonTokens = opts.lessons
           ? opts.lessons.split(",").map((l) => l.trim())
           : undefined;
+        if (
+          lessonTokens &&
+          lessonTokens.some((lesson) => lesson.length === 0)
+        ) {
+          console.error("Empty lesson name provided in --lessons list.");
+          process.exit(1);
+        }
+        const lessons =
+          lessonTokens && lessonTokens.length > 0 ? lessonTokens : undefined;
         if (lessons && lessons.length > 0) {
           await initDb();
           const availableLessons = getAvailableLessons();

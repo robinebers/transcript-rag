@@ -76,6 +76,11 @@ export async function initDb() {
   const currentVersion = versionRow?.user_version ?? 0;
 
   if (currentVersion !== SCHEMA_VERSION) {
+    if (currentVersion !== 0) {
+      console.warn(
+        "Database schema changed; existing data will be cleared. Re-ingest transcripts.",
+      );
+    }
     database.exec(`
       DROP TABLE IF EXISTS chunks_fts;
       DROP TABLE IF EXISTS vec_chunks;
