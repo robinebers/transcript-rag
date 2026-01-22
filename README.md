@@ -18,6 +18,10 @@ bun index.ts --ingest --force            # Re-ingest all
 bun index.ts --ingest --transcripts-dir <path>
 ```
 
+Notes:
+- Ingest automatically skips unchanged files based on mtime + size.
+- If the database schema changes, existing data is cleared and you must re-ingest.
+
 ### List Available Lessons
 
 ```bash
@@ -28,8 +32,13 @@ bun index.ts --list-lessons              # Show all ingested lessons
 
 ```bash
 bun index.ts --ask "your question"       # Query transcripts
-bun index.ts --ask "?" --top-k 10        # Retrieve 10 chunks
+bun index.ts --ask "?" --top-k 10        # Retrieve 10 chunks (default 25)
 bun index.ts --ask "?" --transcripts-dir <path>
 bun index.ts --ask "?" --lessons "lesson-name"               # Filter to one lesson
 bun index.ts --ask "?" --lessons "lesson-1,lesson-2"         # Filter to multiple
 ```
+
+RAG details (built-in, no flags needed):
+- Chunking: ~45s windows with 10s overlap.
+- Normalization: trims cues like “[music]”, removes speaker prefixes, de-dups consecutive lines.
+- Retrieval: hybrid (vector + BM25) with rerank, then neighbor expansion (±1 chunk).
