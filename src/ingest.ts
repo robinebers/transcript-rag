@@ -1,4 +1,4 @@
-import { readdir } from "node:fs/promises";
+import { readdir, stat } from "node:fs/promises";
 import { join, parse as parsePath } from "node:path";
 import { embedTexts } from "./embed";
 import {
@@ -6,10 +6,10 @@ import {
   initDb,
   insertChunk,
   insertEmbedding,
-  isProcessed,
+  getProcessedInfo,
   recordProcessed,
 } from "./db";
-import { parseSrt } from "./srt";
+import { aggregateEntries, normalizeEntries, parseSrt } from "./srt";
 
 type IngestOptions = {
   transcriptsDir: string;
@@ -19,9 +19,13 @@ type IngestOptions = {
 export async function runIngest(options: IngestOptions) {
   await initDb();
 
-  const dirEntries = await readdir(options.transcriptsDir, { withFileTypes: true });
+  const dirEntries = await readdir(options.transcriptsDir, {
+    withFileTypes: true,
+  });
   const srtFiles = dirEntries
-    .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith(".srt"))
+    .filter(
+      (entry) => entry.isFile() && entry.name.toLowerCase().endsWith(".srt"),
+    )
     .map((entry) => entry.name);
 
   if (srtFiles.length === 0) {
@@ -36,21 +40,27 @@ export async function runIngest(options: IngestOptions) {
     const { name: lessonName } = parsePath(filename);
     const filepath = join(options.transcriptsDir, filename);
 
-    const alreadyProcessed = isProcessed(lessonName);
-    if (alreadyProcessed && !options.force) {
-      console.log(`Skipping already processed: ${filename}`);
-      skipped += 1;
-      continue;
-    }
-
-    if (options.force && alreadyProcessed) {
-      deleteByLesson(lessonName);
-    }
-
     const file = Bun.file(filepath);
     if (!(await file.exists())) {
       console.warn(`File missing: ${filepath}`);
       continue;
+    }
+
+    const stats = await stat(filepath);
+    const mtime = Math.floor(stats.mtimeMs);
+    const size = stats.size;
+    const processed = getProcessedInfo(lessonName);
+    const isUnchanged =
+      processed && processed.mtime === mtime && processed.size === size;
+
+    if (!options.force && isUnchanged) {
+      console.log(`Skipping unchanged: ${filename}`);
+      skipped += 1;
+      continue;
+    }
+
+    if (options.force || processed) {
+      deleteByLesson(lessonName);
     }
 
     const content = await file.text();
@@ -61,29 +71,40 @@ export async function runIngest(options: IngestOptions) {
       continue;
     }
 
+    const normalizedEntries = normalizeEntries(entries);
+    const chunks = aggregateEntries(normalizedEntries, 45, 10);
+
+    if (chunks.length === 0) {
+      console.warn(`No chunks created from ${filename}`);
+      continue;
+    }
+
     const embeddings = await embedTexts(
-      entries.map((entry) => entry.text),
-      "document"
+      chunks.map((chunk) => chunk.text),
+      "document",
     );
 
-    for (let i = 0; i < entries.length; i++) {
-      const entry = entries[i];
+    for (let i = 0; i < chunks.length; i++) {
+      const chunk = chunks[i];
       const embedding = embeddings[i];
       const chunkId = insertChunk({
         lessonName,
-        startTime: entry.start,
-        endTime: entry.end,
-        text: entry.text,
+        chunkIndex: chunk.chunkIndex,
+        startTime: chunk.start,
+        endTime: chunk.end,
+        startSeconds: chunk.startSeconds,
+        endSeconds: chunk.endSeconds,
+        text: chunk.text,
       });
       insertEmbedding(chunkId, embedding);
     }
 
-    recordProcessed(lessonName);
+    recordProcessed(lessonName, mtime, size);
     ingested += 1;
-    console.log(`Ingested: ${filename} (${entries.length} chunks)`);
+    console.log(`Ingested: ${filename} (${chunks.length} chunks)`);
   }
 
   console.log(
-    `Ingest complete. Ingested ${ingested}, skipped ${skipped}, total files ${srtFiles.length}.`
+    `Ingest complete. Ingested ${ingested}, skipped ${skipped}, total files ${srtFiles.length}.`,
   );
 }
