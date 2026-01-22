@@ -14,6 +14,11 @@ bun index.ts --ask "user's question here"
 
 **Context retrieval:** Default is 25 chunks. If more context is needed, use `--top-k 50` or even `--top-k 100` for comprehensive answers.
 
+**Built-in RAG behavior (no flags needed):**
+- Chunking: ~45s windows with 10s overlap.
+- Normalization: trims cues like “[music]”, removes speaker prefixes, de-dups consecutive lines.
+- Retrieval: hybrid (vector + BM25) with rerank, then neighbor expansion (±1 chunk).
+
 See [README.md](./README.md) for full command reference and setup instructions.
 
 ## Specific Video/Lesson Mentioned
@@ -31,6 +36,7 @@ bun index.ts --ask "user's question" --lessons "exact-lesson-id"
 ```
 
 This ensures accurate, focused answers from the specific content the user is asking about.
+If the lesson name is wrong or empty, the CLI will error and suggest close matches.
 
 ## Examples
 
@@ -79,6 +85,11 @@ User: "I need a really thorough explanation"
 ```bash
 bun index.ts --ask "question" --top-k 100
 ```
+
+### Notes
+
+- Ingest skips unchanged files automatically (mtime + size).
+- If the database schema changes, existing data is cleared and you must re-ingest.
 
 ### When It IS About Coding
 
