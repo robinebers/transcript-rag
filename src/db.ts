@@ -302,6 +302,11 @@ export function queryBm25(
   const database = ensureDb();
   const cleaned = query.replace(/[^A-Za-z0-9_]+/g, " ").trim();
   if (!cleaned) return [];
+  const tokens = cleaned.split(/\s+/).filter(Boolean);
+  if (tokens.length === 0) return [];
+  const ftsQuery = tokens
+    .map((token) => `"${token.replace(/"/g, '""')}"`)
+    .join(" ");
 
   if (lessonNames && lessonNames.length > 0) {
     const placeholders = lessonNames.map(() => "?").join(",");
@@ -326,7 +331,7 @@ export function queryBm25(
         LIMIT ?
       `,
       )
-      .all(cleaned, ...lessonNames, limit) as RetrievedChunk[];
+      .all(ftsQuery, ...lessonNames, limit) as RetrievedChunk[];
     return rows;
   }
 
@@ -350,7 +355,7 @@ export function queryBm25(
       LIMIT ?
     `,
     )
-    .all(cleaned, limit) as RetrievedChunk[];
+    .all(ftsQuery, limit) as RetrievedChunk[];
   return rows;
 }
 
